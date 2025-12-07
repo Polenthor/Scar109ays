@@ -1,0 +1,100 @@
+/* ---------------------------------- */
+/* 1. KEYFRAMES (The Animation Logic) */
+/* ---------------------------------- */
+
+@keyframes fall {
+  /* Start at the top, fully visible, slight movement */
+  0% {
+    opacity: 1;
+    transform: translateY(0) rotate(0deg);
+  }
+  
+  /* Middle state, allows for duration variance */
+  50% {
+    opacity: 0.8;
+  }
+
+  /* End state: fall off the screen and fade out */
+  100% {
+    opacity: 0;
+    transform: translateY(100vh) rotate(360deg); 
+  }
+}
+
+/* ---------------------------------- */
+/* 2. LAYERING AND POSITIONING */
+/* ---------------------------------- */
+
+/* Set the overall environment for the page */
+.sparkle-page-wrapper {
+  /* Makes the wrapper fill the entire viewport */
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  /* Add a gentle background color gradient like in the example image */
+  background: linear-gradient(to bottom, #b3e5fc, #fce4ec);
+}
+
+/* The content layer (video, cake, text) must be above the sparkles */
+.content-layer {
+  position: relative; /* Brings content above the sparkles */
+  z-index: 10;
+}
+
+/* The sparkle layer covers the viewport */
+.sparkle-layer {
+  position: fixed; /* Keeps the sparkles fixed in the viewport */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* Prevents scrollbars from appearing */
+  z-index: 5; /* Puts it behind the content */
+  pointer-events: none; /* Allows clicks/interaction to pass through to content */
+}
+
+
+/* ---------------------------------- */
+/* 3. INDIVIDUAL SPARKLE STYLING */
+/* ---------------------------------- */
+
+.sparkle {
+  position: absolute;
+  top: -10px; /* Start just above the viewport */
+  width: 20px; /* Sparkle size */
+  height: 20px;
+  background-color: #ffd700; /* Gold color */
+  border-radius: 50%; /* Make them round */
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+  /* Use different shapes for variety (small squares, circles, etc.) */
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%); /* A star shape */
+
+  /* Apply the animation */
+  animation-name: fall;
+  animation-iteration-count: infinite; /* Loop forever */
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+
+
+/* ---------------------------------- */
+/* 4. ANIMATION VARIATION (THE MAGIC) */
+/* ---------------------------------- */
+
+/* Apply random starting positions, durations, and delays to each sparkle 
+   to make the effect look organic and non-repeating. */
+.sparkle:nth-child(even) {
+  background-color: #ffffff;
+ background-image: url("/cake.png"); /* White/Silver sparkles */
+  clip-path: circle(50% at 50% 50%); /* Round back to circles for variety */
+}
+
+/* For every sparkle, we set unique animation properties */
+.sparkle:nth-child(1) { left: 10%; animation-duration: 8s; animation-delay: 1.2s; }
+.sparkle:nth-child(2) { left: 20%; animation-duration: 10s; animation-delay: 4.5s; }
+.sparkle:nth-child(3) { left: 30%; animation-duration: 7s; animation-delay: 0.1s; }
+.sparkle:nth-child(4) { left: 40%; animation-duration: 9s; animation-delay: 3.3s; }
+.sparkle:nth-child(5) { left: 50%; animation-duration: 6s; animation-delay: 5.8s; }
+/* ... continue this pattern for all 100 sparkles ... */
+/* To keep this example short, I've only included 5, but you would repeat this 
+   for as many sparkles as you generated in the React component (100 in this case). */

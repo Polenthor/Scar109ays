@@ -1,0 +1,100 @@
+/* container */
+.bb-root {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(180deg, #fff8fb 0%, #fff 40%);
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+/* cake area (center) */
+.bb-cake-container {
+  width: min(760px, 92vw);
+  height: min(500px, 70vh);
+  position: relative;
+  border-radius: 20px;
+  overflow: visible; /* confetti will overflow */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('/cake.png'); /* make sure public/cake.png exists */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+
+/* Confetti piece base style */
+.bb-confetti {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  pointer-events: none;
+  border-radius: 2px;
+  opacity: 0.98;
+  transform-origin: center;
+  will-change: transform, opacity, top, left;
+  animation-name: bb-fly, bb-rotate;
+  animation-timing-function: cubic-bezier(.15,.7,.35,1), linear;
+  animation-fill-mode: forwards;
+  /* duration and delay are set inline by JS via --duration / --delay */
+  animation-duration: var(--duration, 2000ms), 1000ms;
+  animation-delay: var(--delay, 0ms), 0ms;
+}
+
+/* main fly animation uses custom properties for angle/speed/drift */
+@keyframes bb-fly {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) translateY(0) rotate(0deg);
+  }
+  60% {
+    opacity: 1;
+  }
+  100% {
+    /* use the CSS calc to move by speed and drift converted to px */
+    transform: translate(
+        calc(-50% + var(--drift, 0px)),
+        calc(-50% - var(--speed, 400px))
+      )
+      rotate(0deg);
+    opacity: 0;
+  }
+}
+
+/* rotate slowly in 2D/3D for wobble */
+@keyframes bb-rotate {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  50% { transform: translate(-50%, -50%) rotate(180deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* button that triggers a manual burst */
+.bb-burst-btn {
+  position: absolute;
+  bottom: 18px;
+  right: 18px;
+  z-index: 20;
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: none;
+  background: linear-gradient(90deg,#ff8ab6,#ffd36b);
+  color: #222;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.14);
+  transform: translateZ(0);
+}
+
+/* smaller screens adjustments */
+@media (max-width: 600px) {
+  .bb-cake-container {
+    height: 50vh;
+  }
+  .bb-burst-btn {
+    padding: 8px 12px;
+    bottom: 12px;
+    right: 12px;
+  }
+}
