@@ -74,7 +74,14 @@ useEffect(() => {
           alignSelf:"center"
         }}
       />
-      
+      <img
+        src="/tns.png"
+        alt='tns'
+        style={{
+          width: "300px",
+          alignSelf:"center"
+        }}
+      />
       <h1></h1>
       
 

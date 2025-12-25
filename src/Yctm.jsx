@@ -17,7 +17,7 @@ const Yctm = () => {
     borderRadius: "10px",
     fontSize: "1.2rem",
     cursor: "pointer"
-  }}>Yes</button> </Link> <span style={{ fontSize: "1.5rem", margin: "0 10px" }}>Or</span><button  onClick={() => window.location.reload()}>No</button>
+  }}>Yes</button> </Link> <span style={{ fontSize: "1.5rem", margin: "0 10px" }}>Or</span><button>No</button>
    
 
     </div>
