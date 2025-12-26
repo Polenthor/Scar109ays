@@ -51,7 +51,7 @@ useEffect(() => {
       
       <audio src="/music.mp3" autoPlay loop/>
 
-      <video width="300" autoPlay loop controls  style={{ marginBottom: "20px" }}>
+      <video width="300" autoPlay loop controls muted  style={{ marginBottom: "20px" }}>
           <source src="/video.webm" type="video/webm" />
         </video>
 
