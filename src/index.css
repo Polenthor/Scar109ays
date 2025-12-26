@@ -79,6 +79,12 @@ body.video-page {
   background: none !important;
 }
 
+.video-page {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
 /* Background video */
 .bg-video {
   position: fixed;
@@ -87,4 +93,18 @@ body.video-page {
   height: 100%;
   object-fit: cover;
   z-index: -1;
+}
+
+/* Content above video */
+.content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: white;
+}
+
+.content img {
+  width: 300px;
+  margin: 10px;
+  border-radius: 12px;
 }
