@@ -12,7 +12,14 @@ const Iknew = () => {
     WebkitBackgroundClip: "text",
     color: "transparent"
   }}>Gay</span> Man</h1>
-        <h1 class="title">No Wonder You Only Hangout With Boys</h1>
+        <h1 class="title">What are you doing <span  style={{
+    fontSize: "3rem",
+    margin: "0 10px",
+    fontWeight: "bold",
+    background: "linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet, black, black, black, black, black, black, black, black, black, black, black)",
+    WebkitBackgroundClip: "text",
+    color: "transparent"
+  }}>Gay NIGGA</span> go touch grass and get sme bitches</h1>
     
   <Link to="/gay"><button >Next</button></Link>  
 
