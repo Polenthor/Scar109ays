@@ -19,7 +19,7 @@ const Iknew = () => {
     background: "linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet, black, black, black, black, black, black, black, black, black, black, black)",
     WebkitBackgroundClip: "text",
     color: "transparent"
-  }}>Gay NIGGA</span> go touch grass and get sme bitches</h1>
+  }}>Gay NIGGA</span> go touch grass and get some bitches</h1>
     
   <Link to="/gay"><button >Next</button></Link>  
 
