@@ -6,7 +6,8 @@
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #000000;
-  background-image: url("/bg.jpg");
+ 
+
    
 
   font-synthesis: none;
@@ -68,4 +69,22 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
   
+}
+body {
+  background: url("/bg.jpg") 
+}
+
+/* REMOVE background image ONLY for video page */
+body.video-page {
+  background: none !important;
+}
+
+/* Background video */
+.bg-video {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
 }
