@@ -41,7 +41,6 @@ useEffect(() => {
    
     
     
-    <body class="video-page" >
   <div className="video-page"
   
       style={{ textAlign: "center", marginTop: "40px" }}>
@@ -141,7 +140,7 @@ useEffect(() => {
       
 
  
-    </div></body>
+    </div>
   )
 }
 
