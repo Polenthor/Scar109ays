@@ -25,13 +25,7 @@ a:hover {
   color: #535bf2;
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
+
 
 h1 {
   font-size: 3.2em;
@@ -71,40 +65,57 @@ button:focus-visible {
   
 }
 body {
-  background: url("/bg.jpg") 
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: url("/bg.jpg");
 }
 
 /* REMOVE background image ONLY for video page */
-body.video-page {
-  background: none !important;
-}
-
 .video-page {
-  position: relative;
   min-height: 100vh;
-  overflow: hidden;
+  position: relative;
+  background: transparent;
+  overflow-y: auto;
 }
 
-/* Background video */
+/* Background video (VISIBLE NOW) */
 .bg-video {
   position: fixed;
   inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: -1;
+
+  z-index: 0;
+  pointer-events: none;
 }
 
-/* Content above video */
 .content {
   position: relative;
   z-index: 1;
-  text-align: center;
-  color: white;
+  padding: 120px 20px;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
+/* Images */
 .content img {
-  width: 300px;
-  margin: 10px;
+  width: 100%;
+  height: auto;
   border-radius: 12px;
+  object-fit: cover;
+}
+
+.video-page {
+  outline: 5px solid lime;
+}
+.video-page,
+.video-page * {
+  background-image: none !important;
 }
