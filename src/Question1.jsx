@@ -8,8 +8,7 @@ const Question1 = () => {
 
         <h1 class="title">Now, Are You Surprised </h1>
     
-  <Link to="/yes"><button >Yes</button></Link>  <span style={{ fontSize: "1.5rem", margin: "0 10px" }}>Or</span> <Link to="/question"><button >No</button></Link>
-
+  <Link to="/yes"><button >Yes</button></Link>  
     </div>
   )
 }
