@@ -66,17 +66,43 @@ useEffect(() => {
           alignSelf:"center"
         }}
       />
+      
+      
       <img
-        src="/undo.png"
-        alt='undo'
+        src="/1.jpg"
+        alt='1'
         style={{
           width: "300px",
           alignSelf:"center"
         }}
       />
       <img
-        src="/tns.png"
-        alt='tns'
+        src="/2.jpg"
+        alt='2'
+        style={{
+          width: "300px",
+          alignSelf:"center"
+        }}
+      />
+      <img
+        src="/3.jpg"
+        alt='3'
+        style={{
+          width: "300px",
+          alignSelf:"center"
+        }}
+      />
+      <img
+        src="/4.jpg"
+        alt='4'
+        style={{
+          width: "300px",
+          alignSelf:"center"
+        }}
+      />
+      <img
+        src="/5.jpg"
+        alt='5'
         style={{
           width: "300px",
           alignSelf:"center"
