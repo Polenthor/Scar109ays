@@ -46,6 +46,11 @@ useEffect(() => {
 }, []);
 
   return (
+   <html>
+<head>
+
+  <link rel="stylesheet" href="birthday.css">
+</head>
     <div
       style={{ textAlign: "center", marginTop: "40px" }}>
       
