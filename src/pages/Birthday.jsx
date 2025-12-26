@@ -33,31 +33,32 @@ useEffect(() => {
 
   return () => clearInterval(interval);
 }, []);
-useEffect(() => {
-  const interval = setInterval(() => {
-    confetti({
-      particleCount: 60,
-      spread: 70,
-      origin: { x: Math.random(), y: Math.random() - 0.2 }
-    });
-  }, 500);
 
-  return () => clearInterval(interval);
-}, []);
+
+
 
   return (
    
     
     
     <body class="video-page" >
-    <div class="content"
+  <div className="video-page"
+  
       style={{ textAlign: "center", marginTop: "40px" }}>
+      <video
+      className="bg-video"
+      autoPlay
+      muted
+      loop
+      playsInline
+    >
       
+      <source src="/video.webm" type="video/webm" />
+    </video>
       <audio src="/music.mp3" autoPlay loop/>
 
-      <video width="300" autoPlay loop controls  style={{ marginBottom: "20px" }}>
-          <source src="/video.webm" type="video/webm" />
-        </video>
+    
+        
 
 
 
