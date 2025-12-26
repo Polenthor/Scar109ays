@@ -113,6 +113,30 @@ useEffect(() => {
           alignSelf:"center"
         }}
       />
+    <img
+        src="/6.jpg"
+        alt='6'
+        style={{
+          width: "300px",
+          alignSelf:"center"
+        }}
+      />
+    <img
+        src="/7.jpg"
+        alt='7'
+        style={{
+          width: "300px",
+          alignSelf:"center"
+        }}
+      />
+    <img
+        src="/8.jpg"
+        alt='8'
+        style={{
+          width: "300px",
+          alignSelf:"center"
+        }}
+      />
       <h1></h1>
       
 
