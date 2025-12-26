@@ -51,7 +51,8 @@ useEffect(() => {
 
   <link rel="stylesheet" href="birthday.css">
 </head>
-    <div
+ <body class="video-page">
+    <div class="content"
       style={{ textAlign: "center", marginTop: "40px" }}>
       
       <audio src="/music.mp3" autoPlay loop/>
@@ -118,6 +119,7 @@ useEffect(() => {
 
  
     </div>
+ </body>
   )
 }
 
