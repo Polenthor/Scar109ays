@@ -46,18 +46,16 @@ useEffect(() => {
 }, []);
 
   return (
-   <html>
-<head>
-
-  <link rel="stylesheet" href="birthday.css">
-</head>
- <body class="video-page">
+   
+    
+    
+    <body class="video-page" >
     <div class="content"
       style={{ textAlign: "center", marginTop: "40px" }}>
       
       <audio src="/music.mp3" autoPlay loop/>
 
-      <video width="300" autoPlay loop controls muted  style={{ marginBottom: "20px" }}>
+      <video width="300" autoPlay loop controls  style={{ marginBottom: "20px" }}>
           <source src="/video.webm" type="video/webm" />
         </video>
 
@@ -118,8 +116,7 @@ useEffect(() => {
       
 
  
-    </div>
- </body>
+    </div></body>
   )
 }
 
