@@ -112,9 +112,7 @@ body {
   object-fit: cover;
 }
 
-.video-page {
-  outline: 5px solid lime;
-}
+
 .video-page,
 .video-page * {
   background-image: none !important;
